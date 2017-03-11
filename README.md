@@ -1,4 +1,6 @@
-# coursera-dbm
+# coursera-dwbi
+Materials for Coursera: Data Warehousing for Business Intelligence
+
 ### debug
 ```
 docker run --rm --name db \
