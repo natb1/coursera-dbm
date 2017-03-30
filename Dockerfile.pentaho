@@ -1,0 +1,7 @@
+FROM openjdk:8
+
+ADD ./pentaho-server /opt/pentaho-server
+RUN rm /opt/pentaho-server/promptuser.sh
+RUN /opt/pentaho-server/set-pentaho-env.sh
+
+ENTRYPOINT bash -c "/opt/pentaho-server/start-pentaho.sh && tail -f /opt/pentaho-server/tomcat/logs/*"
